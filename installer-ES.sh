@@ -57,8 +57,6 @@ download(){
         exit 1
     fi
     mv "./hontza-${GVERSION}/src" './hontza-source'
-    cp src/db/mysql.cnf "${WORKFOLDER}"/hontza-source/db/
-    cp src/sites/all/modules/apachesolr/tomcat "${WORKFOLDER}"/hontza-source/sites/all/modules/apachesolr/
 ##      mv "RAIZ DONDE COPIARAS LA CARPETA QUE DESCARGES EN EL SERVIDOR (PUEDE SER /HOME)/hontza-5.6/src" './hontza-source'
     
 }
@@ -651,7 +649,7 @@ service mysql restart
 WORKFOLDER=/tmp/hwork
 REPO="https://github.com/prateeksachan/hontza/archive"
 LAST="http://www.hontza.es/last"
-GVERSION="${1}"
+GVERSION="master"
 DB='hontza'
 DBUSER='hontza'
 DBPWD='hontza'
