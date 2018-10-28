@@ -57,6 +57,8 @@ download(){
         exit 1
     fi
     mv "./hontza-${GVERSION}/src" './hontza-source'
+    cp src/db/mysql.cnf "${WORKFOLDER}"/hontza-source/db/
+    cp src/sites/all/modules/apachesolr/tomcat "${WORKFOLDER}"/hontza-source/sites/all/modules/apachesolr/
 ##      mv "RAIZ DONDE COPIARAS LA CARPETA QUE DESCARGES EN EL SERVIDOR (PUEDE SER /HOME)/hontza-5.6/src" './hontza-source'
     
 }
@@ -628,7 +630,8 @@ DELETE FROM '${DB}'.variable WHERE variable.name = "red_registrar_is_registrado_
 function activar_demonio_solr(){
 	echo "activar demonio de solr"
 	cp "${WORKFOLDER}"/hontza-source/sites/all/modules/apachesolr/tomcat /etc/init.d/. 
-	/etc/init.d/tomcat restart
+	sudo chmod 755 /etc/init.d/tomcat
+    /etc/init.d/tomcat restart
 }
 
 function mysql_conf(){
@@ -656,7 +659,7 @@ WEBROOT='/var/www/html'
 WEBFOLDER='hontza'
 DBUSER_F='mysuser'
 DBROOT_F='myroot'
-TOMCAT_VERSION='7.0.88'
+TOMCAT_VERSION='7.0.91'
 
 
 #set +e
