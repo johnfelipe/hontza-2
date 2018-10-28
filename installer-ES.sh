@@ -649,7 +649,7 @@ service mysql restart
 #######################################################
 
 WORKFOLDER=/tmp/hwork
-REPO="https://github.com/CDE-Inteligencia-Competitiva/hontza/archive"
+REPO="https://github.com/prateeksachan/hontza/archive"
 LAST="http://www.hontza.es/last"
 GVERSION="${1}"
 DB='hontza'
@@ -668,7 +668,7 @@ echo
 echo "..............SCRIPT DE INSTALACION DEL SERVIDOR DE HONTZA.........."
 echo "Este script intenta instalar los paquetes de Hontza, y luego intenta configurarlos."
 echo "Si lo prefieres, puedes instalar Hontza manualmente siguiendo las instrucciones disponibles en:"
-echo " https://github.com/CDE-Inteligencia-Competitiva/hontza "
+echo " https://github.com/prateeksachan/hontza "
 echo
 echo "Deseas continuar? ( yes/[NO] )"
 read CONTINUE
