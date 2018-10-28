@@ -734,7 +734,7 @@ then
   DB="$BUF"
 fi
        
-echo "Password para el usuario \"${DBUSER}\" de la base de datos \"${DB}\":"
+echo "Enter Database user for the datos \"${DB}\":"
 read BUF
 if [ -n "$BUF" ]
 then
