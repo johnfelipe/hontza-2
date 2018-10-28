@@ -649,7 +649,7 @@ service mysql restart
 WORKFOLDER=/tmp/hwork
 REPO="https://github.com/prateeksachan/hontza/archive"
 LAST="http://www.hontza.es/last"
-GVERSION="master"
+GVERSION="${1}"
 DB='hontza'
 DBUSER='hontza'
 DBPWD='hontza'
