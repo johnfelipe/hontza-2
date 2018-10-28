@@ -463,6 +463,7 @@ function install_tomcat(){
     fi
  
     if [ -n "$(which apt-get 2>/dev/null)" ]; then 
+        add-apt-repository ppa:openjdk-r/ppa -y
         apt-get -y -f install openjdk-8-jdk
     elif [ -n "$(which yum 2>/dev/null)" ]; then
         yum -y install java-1.7.0-openjdk
