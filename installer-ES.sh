@@ -65,7 +65,8 @@ install_packages(){
 
     if [ -n "$(which apt-get 2>/dev/null)" ]; then
         apt-get update
-        apt-get -y -f install unzip zip apache2 php-gettext php5-mcrypt php-crypt-blowfish php5-mysql libapache2-mod-php5 mysql-server mysql-client php5-mysql php5-curl php5-mcrypt php-pear php-xml-dtd php-xml-htmlsax3 php-xml-parser php-xml-rpc php-xml-rpc2 php-xml-rss php-xml-serializer php5-cli php5-common php5-gd php5-imap php5-json php5-memcache  php5-memcached php5-readline php5-xmlrpc php5-xsl
+        apt-get -y -f install unzip zip apache2 php5.6-gettext php5.6-mcrypt php-crypt-blowfish php5.6-mysql libapache2-mod-php5.6 mysql-client php5.6-mysql php5.6-curl php5.6-mcrypt php-pear php-xml-htmlsax3 php-xml-parser php-xml-rpc2 php-xml-serializer php5.6-cli php5.6-common php5.6-gd php5.6-imap php5.6-json php5.6-memcache php5.6-memcached php5.6-readline php5.6-xmlrpc php5.6-xsl
+        apt-get -y -f install php5.6-mysql mysql-server
         php5enmod mcrypt
         
     elif [ -n "$(which yum 2>/dev/null)" ]; then
