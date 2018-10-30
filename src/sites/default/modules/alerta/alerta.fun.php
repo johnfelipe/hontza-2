@@ -2262,7 +2262,7 @@ function alerta_get_introduccion_logo_by_subdominio($is_alerta_o_boletin=0,$logo
         }
         //intelsat-2016
         if(!@file_exists($src) || red_crear_usuario_is_sites_default_files_buho_logo($src)){
-            $src='http://'.$_SERVER['HTTP_HOST'].base_path().'sites/default/files/buho_logo.png'; 
+            $src='https://'.$_SERVER['HTTP_HOST'].base_path().'sites/default/files/buho_logo.png'; 
         }else{
             $src=$base_url.'/system/files/'.basename($src);
         }
@@ -2270,10 +2270,10 @@ function alerta_get_introduccion_logo_by_subdominio($is_alerta_o_boletin=0,$logo
     }else if(red_is_servidor_central() || red_funciones_is_sareko_id_alerta()){    
         //gemini-2014
         if(in_array($_SERVER['HTTP_HOST'],array('network.hontza.es'))){
-            $src='http://'.$_SERVER['HTTP_HOST'].base_path().'sites/default/files/buho_logo.png';
+            $src='https://'.$_SERVER['HTTP_HOST'].base_path().'sites/default/files/buho_logo.png';
         }else{
         //    
-            $src='http://'.$_SERVER['HTTP_HOST'].base_path().'sites/'.strtolower(_SAREKO_ID).'.hontza.es/files/'.red_get_red_logo_prefijo().'-buho_logo.png';    
+            $src='https://'.$_SERVER['HTTP_HOST'].base_path().'sites/'.strtolower(_SAREKO_ID).'.hontza.es/files/'.red_get_red_logo_prefijo().'-buho_logo.png';
         }        
     }else{             
         //$src='http://'.$_SERVER['HTTP_HOST'].base_path().'sites/default/files/buho_logo.png';
